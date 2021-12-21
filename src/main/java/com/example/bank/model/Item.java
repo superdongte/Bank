@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -20,4 +22,7 @@ public class Item {
 	private int category;
 	private int itemrank;
 	private int itemprice;
+	@ManyToOne
+	@JoinColumn(name="pid")
+	private Person person;
 }
