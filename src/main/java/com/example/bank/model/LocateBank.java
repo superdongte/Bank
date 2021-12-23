@@ -18,8 +18,15 @@ public class LocateBank {
 	private Long bankid;
 	@Column(nullable=false, length=50)
 	private String bankname;
-	@Column(nullable=false, length=255)
-	private String banklocation;
 	@Column(nullable=false, length=50)
 	private String banktelphone;
+	@Column(nullable=false, length=255)
+	private String banklocation;
+	@Column(nullable=false, length=255)
+	private double banklat;
+	@Column(nullable=false, length=255)
+	private double banklng;
+	@Column(nullable=false, length=255)
+	private String bankImg;
+		
 }

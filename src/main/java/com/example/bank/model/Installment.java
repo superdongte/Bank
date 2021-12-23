@@ -17,7 +17,7 @@ public class Installment {
 	private Long installid;
 	@Column(nullable=false, length=80)
 	private String installname;
-	private float baserate;
-	private float primerate;
-	private int insmonth; 
+	private String baserate;
+	private String primerate;
+	private String insmonth; 
 }
