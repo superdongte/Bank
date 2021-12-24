@@ -8,8 +8,10 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.example.bank.model.Item;
 
-public interface ItemRepository extends JpaRepository<Item, String>{
+public interface ItemRepository extends JpaRepository<Item, Long>{
 	
 	@Query(value="select * from item where icode like %:icode% order by itemprice desc",nativeQuery=true)
 	List<Item> findByItemList(@Param("icode") String icode);
+	
+	
 }

@@ -19,4 +19,9 @@ public class ItemService {
 	public List<Item> list(String icode){
 		return itemRepository.findByItemList(icode);
 	}
+	@Transactional
+	public Item findByName(Long itemid) {
+		Item itemname = itemRepository.findById(itemid).get();
+		return itemname;		
+	}
 }

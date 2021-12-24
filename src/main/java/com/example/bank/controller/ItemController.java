@@ -28,6 +28,13 @@ public class ItemController {
 		List<Item> ilist = itemService.list(icode);	
 		return ilist;
 	}
+	@ResponseBody
+	@GetMapping("views/{itemid}")
+	public Item Itemname(@PathVariable Long itemid) {
+		Item itemname = itemService.findByName(itemid);
+		return itemname;
+		
+	}
 //	@GetMapping("view/{icode}")
 //	public Map<String,List<Item>> list(@PathVariable("icode") String icode){
 //		Map<String,List<Item>> map = new HashMap<String, List<Item>>();
