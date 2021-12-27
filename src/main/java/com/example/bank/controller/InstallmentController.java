@@ -22,7 +22,7 @@ public class InstallmentController {
 	public Map<String,List<Installment>>list(){
 		System.out.println("들어간건지");
 		Map<String,List<Installment>> map = new HashMap<String, List<Installment>>();
-		map.put("insdatas", installmentService.list());
+		map.put("insitem", installmentService.list());
 		System.out.println("값은?"+map);
 		return map;
 		
