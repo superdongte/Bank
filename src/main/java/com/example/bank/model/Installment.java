@@ -15,9 +15,11 @@ public class Installment {
 	@Id //id가 기본키
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long installid;
+	@Column(nullable=false, length=45)
+	private String bankname;
 	@Column(nullable=false, length=80)
 	private String installname;
-	private String baserate;
-	private String primerate;
-	private String insmonth; 
+	private double baserate;
+	private double primerate;
+	private int insmonth; 
 }

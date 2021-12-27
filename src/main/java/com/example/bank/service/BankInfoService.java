@@ -5,16 +5,16 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.bank.model.LocateBank;
-import com.example.bank.repository.LocateBankRepository;
+import com.example.bank.model.BankInfo;
+import com.example.bank.repository.BankInfoRepository;
 
 @Service
-public class LocateBankService {
+public class BankInfoService {
 	
 	@Autowired
-	private LocateBankRepository locateBankRepository;
+	private BankInfoRepository locateBankRepository;
 	
-	public List<LocateBank> list() {
+	public List<BankInfo> list() {
 		
 		return locateBankRepository.findAll();
 	}

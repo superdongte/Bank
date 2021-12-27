@@ -9,19 +9,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.bank.model.LocateBank;
-import com.example.bank.service.LocateBankService;
+import com.example.bank.model.BankInfo;
+import com.example.bank.service.BankInfoService;
 
 @RestController
 @RequestMapping("/location/")
-public class LocateBankController {
+public class BankInfoController {
 	@Autowired
-	private LocateBankService locateBankService;
+	private BankInfoService locateBankService;
 	
 	@GetMapping("banklist")
-	public Map<String, List<LocateBank>>list(){
-		Map<String,List<LocateBank>> map = new HashMap<String, List<LocateBank>>();
-		map.put("bdatas", locateBankService.list());
+	public Map<String, List<BankInfo>>list(){
+		Map<String,List<BankInfo>> map = new HashMap<String, List<BankInfo>>();
+		map.put("items", locateBankService.list());
 		return map;
 	}
 }

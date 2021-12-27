@@ -25,8 +25,5 @@ public class Item {
 	private String itemname;
 	private int itemprice;
 	private String image;
-	@ManyToOne
-	@JoinColumn(name="pid")
-	private Person person;
-	
+	private int itemrank;
 }

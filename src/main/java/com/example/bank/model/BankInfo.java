@@ -11,22 +11,21 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
-@Entity(name="locateBank")
-public class LocateBank {
+@Entity(name="bankInfo")
+public class BankInfo {
 	@Id //id가 기본키
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long bankid;
+	@Column(nullable=false, length=10)
+	private String bankid;
+	@Column(nullable=false, length=10)
+	private String branchid;
 	@Column(nullable=false, length=50)
-	private String bankname;
-	@Column(nullable=false, length=50)
-	private String banktelphone;
+	private String banktel;
 	@Column(nullable=false, length=255)
 	private String banklocation;
 	@Column(nullable=false, length=255)
+	private String bankimg;
 	private double banklat;
-	@Column(nullable=false, length=255)
 	private double banklng;
-	@Column(nullable=false, length=255)
-	private String bankImg;
+	
 		
 }

@@ -22,29 +22,33 @@ public class ItemController {
 	@Autowired
 	private ItemService itemService;
 	
-	@ResponseBody
-	@GetMapping("view/{icode}")	
-	public List<Item> list(@PathVariable String icode){
-		List<Item> ilist = itemService.list(icode);	
-		return ilist;
-	}
+	//id번호 입력시 정보가 가게됨
 	@ResponseBody
 	@GetMapping("views/{itemid}")
-	public Item Itemname(@PathVariable Long itemid) {
-		Item itemname = itemService.findByName(itemid);
-		return itemname;
+	public Map<String,Item> Itemname(@PathVariable Long itemid) {
+		Map<String,Item> map = new HashMap<String, Item>();
+		map.put("items", itemService.findByName(itemid));
+		return map;
 		
 	}
-//	@GetMapping("view/{icode}")
-//	public Map<String,List<Item>> list(@PathVariable("icode") String icode){
-//		Map<String,List<Item>> map = new HashMap<String, List<Item>>();
-//		map.put("icode", itemService.list(icode));
-//		System.out.println("값은?"+map);
-//		return map;
-//	}
+	//icode 입력시 정보가 가게됨
+	@GetMapping("view/{icode}")
+	public Map<String,List<Item>> list(@PathVariable("icode") String icode){
+		Map<String,List<Item>> map = new HashMap<String, List<Item>>();
+		map.put("items", itemService.list(icode));
+		System.out.println("값은?"+map);
+		return map;
+	}
 //	@GetMapping("list/{icode}")
 //	public String view(@PathVariable("icode") String icode, Model model) {
 //		model.addAttribute("icode", itemService.list(icode));
 //		return "/item/list";
 //	}
+	//제목없는거
+//	@ResponseBody
+//	@GetMapping("view/{icode}")	
+//	public List<Item> list(@PathVariable String icode){
+//		List<Item> ilist = itemService.list(icode);
+//		return ilist;
+//	}	
 }
