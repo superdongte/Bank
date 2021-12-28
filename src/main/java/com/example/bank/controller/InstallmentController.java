@@ -22,8 +22,15 @@ public class InstallmentController {
 	public Map<String,List<Installment>>list(){
 		System.out.println("들어간건지");
 		Map<String,List<Installment>> map = new HashMap<String, List<Installment>>();
-		map.put("insitem", installmentService.list());
+		map.put("insitem", installmentService.inslist());
 		System.out.println("값은?"+map);
+		return map;
+		
+	}
+	@GetMapping("insmax")
+	public Map<String,List<Installment>>insmax(){
+		Map<String,List<Installment>> map = new HashMap<String, List<Installment>>();
+		map.put("items", installmentService.maxinstall());
 		return map;
 		
 	}

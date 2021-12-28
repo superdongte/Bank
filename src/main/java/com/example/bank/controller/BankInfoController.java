@@ -21,7 +21,7 @@ public class BankInfoController {
 	@GetMapping("banklist")
 	public Map<String, List<BankInfo>>list(){
 		Map<String,List<BankInfo>> map = new HashMap<String, List<BankInfo>>();
-		map.put("items", locateBankService.list());
+		map.put("items", locateBankService.blist());
 		return map;
 	}
 }

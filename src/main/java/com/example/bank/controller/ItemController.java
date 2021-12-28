@@ -27,7 +27,7 @@ public class ItemController {
 	@GetMapping("views/{itemid}")
 	public Map<String,Item> Itemname(@PathVariable Long itemid) {
 		Map<String,Item> map = new HashMap<String, Item>();
-		map.put("items", itemService.findByName(itemid));
+		map.put("items", itemService.findByitemid(itemid));
 		return map;
 		
 	}
@@ -35,7 +35,7 @@ public class ItemController {
 	@GetMapping("view/{icode}")
 	public Map<String,List<Item>> list(@PathVariable("icode") String icode){
 		Map<String,List<Item>> map = new HashMap<String, List<Item>>();
-		map.put("items", itemService.list(icode));
+		map.put("items", itemService.findByitem(icode));
 		System.out.println("값은?"+map);
 		return map;
 	}

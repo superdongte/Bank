@@ -6,17 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.bank.model.BankInfo;
-import com.example.bank.repository.BankInfoRepository;
 
-@Service
-public class BankInfoService {
+public interface BankInfoService {
+	public List<BankInfo> blist();
 	
-	@Autowired
-	private BankInfoRepository locateBankRepository;
-	
-	public List<BankInfo> list() {
-		
-		return locateBankRepository.findAll();
-	}
-
 }
