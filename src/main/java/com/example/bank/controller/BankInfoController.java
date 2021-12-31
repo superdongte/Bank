@@ -13,15 +13,15 @@ import com.example.bank.model.BankInfo;
 import com.example.bank.service.BankInfoService;
 
 @RestController
-@RequestMapping("/location/")
+@RequestMapping("/bank/")
 public class BankInfoController {
 	@Autowired
-	private BankInfoService locateBankService;
+	private BankInfoService bankInfoService;
 	
 	@GetMapping("banklist")
 	public Map<String, List<BankInfo>>list(){
 		Map<String,List<BankInfo>> map = new HashMap<String, List<BankInfo>>();
-		map.put("items", locateBankService.blist());
+		map.put("items", bankInfoService.blist());
 		return map;
 	}
 }

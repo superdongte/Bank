@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.bank.mapper.DepositMapper">
+
+	<select id="Deplist" resultType="Deposit">
+		select *
+		from deposit
+	</select>
+
+<!-- 	예상 금리 맥스값 -->
+	<select id="maxDeposit" resultType="Deposit">
+		select *
+		from deposit
+		where primerate = (select max(primerate)
+					 from deposit); 		
+	</select>
+	
+	<!-- 저금리 출력 하기 -->
+	<select id= "shortDeposit" resultType="Deposit">
+		select *
+		from primerate
+		where 6 >= insmonth order by baserate desc;
+	</select>
+</mapper>

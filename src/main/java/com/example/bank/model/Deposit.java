@@ -10,16 +10,18 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
-@Entity(name="installment")
-public class Installment {
+@Entity(name="deposit")
+public class Deposit {
 	@Id //id가 기본키
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long installid;
+	private Long depositid;
 	@Column(nullable=false, length=45)
 	private String bankname;
 	@Column(nullable=false, length=80)
-	private String installname;
+	private String depositname;
 	private double baserate;
 	private double primerate;
-	private int insmonth; 
+	private int dmonth;
+	@Column(nullable=false, length=10)
+	private String dkind;
 }
