@@ -11,12 +11,18 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="findByitem" resultType="Item">
 		select *
 		from item
-		where icode = #{icode} order by itemprice desc;		
+		where icode = #{icode} order by itemrank limit 6;		
 	</select>
 	
 	<select id="findByitemid" resultType="Item">
 		select *
 		from item
 		where itemid = #{itemid}
+	</select>
+	
+	<select id="fixitem" resultType="Item">
+		select *
+		from item
+		where icode = "FIX"
 	</select>
 </mapper>

@@ -25,4 +25,10 @@ public class ItemServiceImpl implements ItemService{
 		return itemMapper.findByitemid(itemid);
 	}
 
+	@Override
+	public List<Item> fixitem() {
+		// TODO Auto-generated method stub
+		return itemMapper.fixitem();
+	}
+
 }

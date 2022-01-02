@@ -39,6 +39,14 @@ public class ItemController {
 		System.out.println("값은?"+map);
 		return map;
 	}
+	@GetMapping("view/fixlist")
+	public Map<String,List<Item>> fixitem(){
+		Map<String, List<Item>> map = new HashMap<String, List<Item>>();
+		map.put("items", itemService.fixitem());
+		return map;
+	}
+	
+	
 //	@GetMapping("list/{icode}")
 //	public String view(@PathVariable("icode") String icode, Model model) {
 //		model.addAttribute("icode", itemService.list(icode));

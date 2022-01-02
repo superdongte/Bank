@@ -12,4 +12,5 @@ import com.example.bank.model.Item;
 public interface ItemService {
 	public List<Item> findByitem(String icode);
 	public Item findByitemid(Long itemid);
+	public List<Item> fixitem();
 }
