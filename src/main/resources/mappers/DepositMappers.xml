@@ -23,6 +23,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id= "shortDeposit" resultType="Deposit">
 		select *
 		from deposit
-		where 6 >= dmonth order by baserate desc;
+		where 6 >= dmonth order by baserate asc;
 	</select>
 </mapper>
