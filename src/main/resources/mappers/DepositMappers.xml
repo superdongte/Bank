@@ -22,7 +22,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 저금리 출력 하기 -->
 	<select id= "shortDeposit" resultType="Deposit">
 		select *
-		from primerate
-		where 6 >= insmonth order by baserate desc;
+		from deposit
+		where 6 >= dmonth order by baserate desc;
 	</select>
 </mapper>

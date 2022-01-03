@@ -30,14 +30,14 @@ public class DepositController {
 	@GetMapping("depmax")
 	public Map<String,List<Deposit>>maxDeposit(){
 		Map<String,List<Deposit>> map = new HashMap<String, List<Deposit>>();
-		map.put("items", depositService.maxDeposit());
+		map.put("insitem", depositService.maxDeposit());
 		return map;
 		
 	}
 	@GetMapping("shortdep")
 	public Map<String, List<Deposit>>shortDeposit(){
 		Map<String,List<Deposit>> map = new HashMap<String, List<Deposit>>();
-		map.put("items", depositService.shortDeposit());
+		map.put("insitem", depositService.shortDeposit());
 		return map;
 	}
 }
