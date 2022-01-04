@@ -22,9 +22,10 @@ public class HomeController {
 		//원하는 태그 선택
 		String[] str = elem.text().split(" ");
 		//정보파싱
-		model.addAttribute("weather",elem);
+		String text = elem.text();
+		model.addAttribute("weather",text);
 		
-		System.out.println("갔는지 보는중"+elem);
+		System.out.println("갔는지 보는중"+text);
 		return "test";
 	}
 //	@GetMapping("/")
