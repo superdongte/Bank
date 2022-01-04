@@ -10,8 +10,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 뱅크 리스트 값  -->
 	<select id="blist" resultType="BankInfo">
 		select *
-		from bankinfo
-		 		
+		from bankinfo	 		
 	</select>
 	
 </mapper>

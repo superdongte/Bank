@@ -24,7 +24,7 @@
          <span class="my-0 font-weight-normal">잔액기준 COFIX</span>
          <span class="my-0 font-weight-normal">공시일: 2021.12.15.</span>
          <span class="my-0 font-weight-normal">1.19%</span>
-         <span class="my-0 font-weight-normal">다음 공시일: 2022.01.17..</span>
+         <span class="my-0 font-weight-normal">다음 공시일: 2022.01.17.</span>
       </div>
    </div>
 </div>
