@@ -40,4 +40,10 @@ public class DepositController {
 		map.put("insitem", depositService.shortDeposit());
 		return map;
 	}
+	@GetMapping("longdep")
+	public Map<String, List<Deposit>>longDeposit(){
+		Map<String,List<Deposit>> map = new HashMap<String, List<Deposit>>();
+		map.put("insitem", depositService.longDeposit());
+		return map;
+	}
 }

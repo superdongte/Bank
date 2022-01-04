@@ -30,6 +30,12 @@ public class DepositServiceImpl implements DepositService{
 		// TODO Auto-generated method stub
 		return depositMapper.shortDeposit();
 	}
+
+	@Override
+	public List<Deposit> longDeposit() {
+		// TODO Auto-generated method stub
+		return depositMapper.longDeposit();
+	}
 	
 	
 

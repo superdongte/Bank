@@ -11,7 +11,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		from deposit
 	</select>
 
-<!-- 	예상 금리 맥스값 -->
+	<!-- 예상 금리 맥스값 -->
 	<select id="maxDeposit" resultType="Deposit">
 		select *
 		from deposit
@@ -19,10 +19,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 					 from deposit); 		
 	</select>
 	
-	<!-- 저금리 출력 하기 -->
+	<!-- 단기 적금 출력 하기 -->
 	<select id= "shortDeposit" resultType="Deposit">
 		select *
 		from deposit
-		where 6 >= dmonth order by baserate asc;
+		where dkind ='단기적금' order by primerate desc;
+	</select>
+	<!-- 정기 예금 출력 하기 -->
+	<select id= "longDeposit" resultType="Deposit">
+		select *
+		from deposit
+		where dkind ='정기예금' order by primerate desc;
 	</select>
 </mapper>

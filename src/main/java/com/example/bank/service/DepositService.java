@@ -8,4 +8,5 @@ public interface DepositService {
 	public List<Deposit> Deplist();
 	public List<Deposit> maxDeposit();
 	public List<Deposit> shortDeposit();
+	public List<Deposit> longDeposit();
 }
