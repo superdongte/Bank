@@ -9,5 +9,8 @@
 <body>
 	<h1>값은</h1>
 	<h1>${weather }</h1>
+	<h1>${weather2 }</h1>
+	<h1>${weather3 }</h1>
+	<h1>${weather4 }</h1>
 </body>
 </html>
