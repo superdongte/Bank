@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	test중
+	<h1>값은</h1>
+	<h1>${weather }</h1>
 </body>
 </html>
