@@ -14,17 +14,17 @@
 <div class="container">
    <div class="card-deck mb-3 text-center">
       <div class="card mb-4 shadow-sm">
-         <span class="my-0 font-weight-normal">${weather }</span>
-         <span class="my-0 font-weight-normal">${weather2 }</span>
-         <span class="my-0 font-weight-normal">${weather3 }</span>
-         <span class="my-0 font-weight-normal">${weather4 }</span>
+         <span class="my-0 font-weight-normal">${NewCofix1 }</span>
+         <span class="my-0 font-weight-normal">${NewCofix2 }</span>
+         <span class="my-0 font-weight-normal">${NewCofix3 }</span>
+         <span class="my-0 font-weight-normal">${NewCofix4 }</span>
       </div>
 
       <div class="card mb-4 shadow-sm">
-         <span class="my-0 font-weight-normal">잔액기준 COFIX</span>
-         <span class="my-0 font-weight-normal">공시일: 2021.12.15.</span>
-         <span class="my-0 font-weight-normal">1.19%</span>
-         <span class="my-0 font-weight-normal">다음 공시일: 2022.01.17..</span>
+         <span class="my-0 font-weight-normal">${Cofix1 }</span>
+         <span class="my-0 font-weight-normal">${Cofix2 }</span>
+         <span class="my-0 font-weight-normal">${Cofix3 }</span>
+         <span class="my-0 font-weight-normal">${Cofix4 }</span>
       </div>
    </div>
 </div>

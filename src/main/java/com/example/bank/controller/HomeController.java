@@ -26,17 +26,30 @@ public class HomeController {
 		//원하는 태그 선택
 		String[] str = elem.text().split(" ");
 		//정보파싱
-		String text = elem.text();
-		String text2 = elem2.text();
-		String text3 = elem3.text();
-		String text4 = elem4.text();
-		model.addAttribute("weather", text);
-		model.addAttribute("weather2",text2);
-		model.addAttribute("weather3",text3);
-		model.addAttribute("weather4",text4);
+		String ntext = elem.text();
+		String ntext2 = elem2.text();
+		String ntext3 = elem3.text();
+		String ntext4 = elem4.text();
+		model.addAttribute("NewCofix1", ntext);
+		model.addAttribute("NewCofix2",ntext2);
+		model.addAttribute("NewCofix3",ntext3);
+		model.addAttribute("NewCofix4",ntext4);
 	
+		Elements cofix = doc.select("#Content > div.contentArea > div.cofix_new_2019_v2 > ul > li:nth-child(2) > p.item");
+		Elements cofix2 = doc.select("#Content > div.contentArea > div.cofix_new_2019_v2 > ul > li:nth-child(2) > p:nth-child(2)");
+		Elements cofix3 = doc.select("#Content > div.contentArea > div.cofix_new_2019_v2 > ul > li:nth-child(2) > p.percent");
+		Elements cofix4 = doc.select("#Content > div.contentArea > div.cofix_new_2019_v2 > ul > li:nth-child(2) > p:nth-child(4)");
 		
-		System.out.println("갔는지 보는중"+text);
+		String text = cofix.text();
+		String text2 = cofix2.text();
+		String text3 = cofix3.text();
+		String text4 = cofix4.text();
+		
+		model.addAttribute("Cofix1", text);
+		model.addAttribute("Cofix2", text2);
+		model.addAttribute("Cofix3", text3);
+		model.addAttribute("Cofix4", text4);
+		
 		return "test";
 	}
 //	@GetMapping("/")
